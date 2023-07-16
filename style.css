@@ -1,0 +1,28 @@
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form label, form input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+    padding: 5px 10px;
+}
+
+table {
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}

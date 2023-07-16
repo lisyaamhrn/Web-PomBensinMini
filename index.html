@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toni Mini Pom Bensin</title>
+    <style>
+        body{
+            background-image: url('pom.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Selamat Datang di Toni Mini Pom Bensin</h1>
+
+    <form id="transactionForm" method="POST" action="proses.php">
+        <label for="transactionDate">Tanggal:</label>
+        <input type="date" id="transactionDate" name="transactionDate" required><br>
+
+        <label for="customerName">Nama Pelanggan:</label>
+        <input type="text" id="customerName" name="customerName" required><br>
+
+        <label for="fuelType">Jenis Bahan Bakar:</label>
+        <select id="fuelType" name="fuelType" required>
+            <option value="" disabled selected>Pilih jenis bahan bakar</option>
+            <option value="Pertalite" data-price="8000">Pertalite</option>
+            <option value="Pertamax" data-price="10000">Pertamax</option>
+            <option value="Pertamax Turbo" data-price="12000">Pertamax Turbo</option>
+            <option value="Dexlite" data-price="9000">Dexlite</option>
+            <!-- Tambahkan pilihan jenis bahan bakar lainnya sesuai kebutuhan -->
+        </select><br><br>
+
+        <label for="fuelAmount">Jumlah Liter:</label>
+        <input type="number" id="fuelAmount" name="fuelAmount" required><br>
+
+        <label for="pricePerLiter">Harga per liter:</label>
+        <input type="text" id="pricePerLiter" name="pricePerLiter" readonly><br>
+
+        <label for="paymentAmount">Pembayaran:</label>
+        <input type="number" id="paymentAmount" name="paymentAmount" required><br>
+
+        <button type="submit">Cetak struk</button>
+    </form>
+
+    <script>
+        // Mendapatkan elemen select untuk jenis bahan bakar
+        var fuelTypeSelect = document.getElementById('fuelType');
+        // Mendapatkan elemen input untuk harga per liter
+        var pricePerLiterInput = document.getElementById('pricePerLiter');
+
+        // Mengubah harga per liter saat jenis bahan bakar dipilih
+        fuelTypeSelect.addEventListener('change', function() {
+            // Mendapatkan harga per liter dari atribut data-price
+            var selectedOption = this.options[this.selectedIndex];
+            var pricePerLiter = selectedOption.getAttribute('data-price');
+            // Mengisi input harga per liter dengan harga yang sesuai
+            pricePerLiterInput.value = pricePerLiter;
+        });
+    </script>
+</body>
+</html>

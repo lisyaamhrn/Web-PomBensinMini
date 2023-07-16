@@ -1,0 +1,22 @@
+==================================
+       Toni Mini Pom Bensin       
+==================================
+
+Tanggal           : 2023-07-16
+Nama Pelanggan    : Lisya
+Jenis Bahan Bakar : Pertalite
+Jumlah Liter      : 2
+Harga per Liter   : 8000
+
+Total Harga       : 16000
+----------------------------------
+
+Pembayaran        : 20000
+Kembalian         : 4000
+
+----------------------------------
+
+Terima kasih atas kunjungan Anda!
+Selamat berkendara.
+
+==================================
